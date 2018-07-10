@@ -48,8 +48,9 @@ var quotes = [
 ];
 //new array for used quotes to get pushed into until all quotes have been generated once
 var usedQuotes = [];
+
 //generates random quotes
-function generateRandomQuote() {
+function getRandomQuote() {
 	var index = Math.floor((Math.random() * quotes.length));
 	var selectedQuote = quotes.splice(index, 1)[0];
 
@@ -62,6 +63,7 @@ function generateRandomQuote() {
 
 	return selectedQuote;
 }
+
 // generates a new background color for the page and button
 function generateRandomColor() {
 	var r = Math.floor(Math.random() * 256);
@@ -74,11 +76,9 @@ function generateRandomColor() {
 	
 }
 
-
-
 function printQuote() {
 	// Generate a random quote
-	var quote = generateRandomQuote();
+	var quote = getRandomQuote();
 	generateRandomColor();
 	console.log(usedQuotes);
 	// Get the DOM elements by ID
