@@ -93,3 +93,9 @@ function printQuote() {
 
 // Initialize a quote
 printQuote();
+
+// Initialzes a new quote every 30 seconds
+setInterval(function(){
+	printQuote();
+}, 30000);
+
